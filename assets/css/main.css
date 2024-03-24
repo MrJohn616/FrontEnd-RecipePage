@@ -1,0 +1,141 @@
+:root{
+    --color_P--nutmeg: hsl(14, 45%, 36%);
+    --color_P--darkRespberry: hsl(332, 52%, 32%);
+    --color_N--white: hsl(0, 0%, 100%);
+    --color_N--roseWhite: hsl(330, 100%, 98%);
+    --color_N--eggshell: hsl(30, 54%, 90%);
+    --color_N--lightGrey: hsl(30, 18%, 87%);
+    --color_N--wengeBrown: hsl(30, 10%, 34%);
+    --color_N--darkCharcoal: hsl(24, 5%, 18%);
+
+    --font_family--youngSerif: "Young Serif", serif;
+    --font_family--outfitSans: "Outfit", sans-serif;
+    --font--size: 16px;
+}
+html{
+    font-family: var(--font_family--outfitSans);
+    font-size: var(--font--size);
+    line-height: 1.3em;
+    background-color: var(--color_N--eggshell);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.wrapper{
+    background-color: var(--color_N--white);
+}
+.card{
+    width: 100%;
+    max-width: 700px;
+    /* margin-bottom: 30px; */
+}
+.card__img{
+    width: 100%;
+}
+.card__wrapper{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.wrapper__title{
+    line-height: normal;
+}
+.wrapper__subWrapper{
+    background-color: var(--color_N--roseWhite);
+    border-radius: 15px;
+    overflow: auto;
+}
+.wrapper__subWrapper--second{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper__p--second{
+    display: inline;
+}
+.wrapper__ul{
+    list-style: none;
+    line-height: 1.5em;
+    padding-left: 0;
+}
+.wrapper__ul
+li::before{
+    content: "• ";
+    font-size: 1.7em;
+    color: var(--color_P--darkRespberry);
+}
+.wrapper__subWrapper
+.wrapper__title,
+.wrapper__subWrapper
+.wrapper__ul{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+
+.beforeNone{
+    padding-left: 5%;
+}
+.beforeNone
+li::before{
+    content: "";
+}
+.instructions{
+    list-style: auto;
+}
+.lineBefore{
+    border-top: 1px solid var(--color_N--lightGrey);
+    margin: 20px 30px;
+}
+.marginLess{
+    margin: 0;
+}
+.hidde{
+    display: none;
+}
+
+
+
+
+.font--young{
+    font-family: var(--font_family--youngSerif);
+}
+.font--lightGrey{
+    color: var(--color_N--wengeBrown);
+}
+.font--nutmeg{
+    color: var(--color_P--nutmeg);
+}
+.font--dark{
+    color: var(--color_P--darkRespberry);
+}
+
+
+
+
+@media only screen and (min-width: 740px) {
+    body{
+        padding: 3% 0;
+    }
+    .wrapper{
+        border-radius: 18px;
+        padding: 20px;
+        background-color: var(--color_N--white);
+    }
+    .card__wrapper{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card__img{
+        border-radius: 15px;
+    }
+    .beforeNone{
+        padding-left: 3%;
+    }
+}
